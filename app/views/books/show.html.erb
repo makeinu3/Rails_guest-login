@@ -2,8 +2,8 @@
 <table>
   <tr>
     <td>
-      <%= image_tag 'sample-author1.jpg' %><br /> <!-- あとで変える -->
-      <%= @book.user.name %> <!-- あとでリンクにする -->
+      <td><%= image_tag @book.user.get_profile_image %></td>
+      <%= link_to @book.user.name, user_path(@book.user_id) %>
     </td>
     <td><%= @book.title %></td>
     <td><%= @book.body %></td>

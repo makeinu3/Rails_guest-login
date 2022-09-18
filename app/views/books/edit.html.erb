@@ -3,6 +3,7 @@
 
     <div class="col-lg-5 mx-auto my-3">
       <h2>Editing Book</h2>
+      <%= render 'shared/error_message', user: @book %>
       <br>
       <%= form_with model: @book do |f| %>
         <p><label for="InputTitle">Title</label></p>

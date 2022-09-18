@@ -12,8 +12,8 @@
 <div class="row">
   <div class="col">
     <div class="actions">
-      <%= link_to edit_user_path(current_user.id), class: "btn btn-outline-info btn-sm btn-block" do %>
-        <i class="fas fa-user-edit"></i>
+      <%= link_to edit_user_path(current_user.id), class: "btn btn-outline-secondary btn-sm btn-block" do %>
+        <i class="fas fa-user-cog"></i>
       <% end %>
     </div>
   </div>
@@ -21,7 +21,7 @@
 
 
 <h2 class="mt-5">New book</h2>
-<%= form_with model: book do |f| %>
+<%= form_with model: book, url: books_path, method: :post do |f| %>
   <p>Title</p>
   <p><%= f.text_field :title %></p>
   <p>Opinion</p>
